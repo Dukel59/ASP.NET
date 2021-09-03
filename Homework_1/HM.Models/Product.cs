@@ -4,7 +4,11 @@ using System.Text;
 
 namespace HM.Models
 {
-    class Product
+    public class Product: BaseEntity
     {
+        public string Name { get; set; }
+        public string Category { get; set; }
+
+        public virtual List<Comment> Comments { get; set; }
     }
 }
