@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HM.BLL.Interfaces
 {
-    interface IMediaFilesService
+    public interface IMediaFilesService
     {
         Task<Guid> CreateMediaFilesAsync(CreateMediaFiles mediaFiles);
         List<CreateMediaFiles> FindMediaFilesByFunc(Func<MediaFiles, bool> func);
