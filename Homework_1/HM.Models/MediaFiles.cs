@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HM.Models
 {
-    public class Comment: BaseEntity
+    public class MediaFiles: BaseEntity
     {
-        public string AuthorName { get; set; }
-        public string Text { get; set; }
-        public DateTime CreationDate { get; set; }
+        public string Name { get; set; }
+        public string Type { get; set; }
+        public string Path { get; set; }
         public Guid FeedbackId { get; set; }
         public virtual Feedback Feedback { get; set; }
     }
