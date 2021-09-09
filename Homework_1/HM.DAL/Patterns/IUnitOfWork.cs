@@ -10,6 +10,7 @@ namespace HM.DAL.Patterns
     {
         IRepository<Product> Products { get; }
         IRepository<Comment> Comments { get; }
+
         IRepository<Feedback> Feedbacks { get; }
         IRepository<MediaFiles> MediaFiles { get; }
 
