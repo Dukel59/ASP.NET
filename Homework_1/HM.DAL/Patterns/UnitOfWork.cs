@@ -17,9 +17,13 @@ namespace HM.DAL.Patterns
         private readonly AppDbContext _db;
         private IRepository<Product> _products;
         private IRepository<Comment> _comments;
+        private IRepository<Feedback> _feedbacks;
+        private IRepository<MediaFiles> _mediafiles;
 
         public IRepository<Product> Products => _products ?? (_products = new Repository<Product>(_db));
         public IRepository<Comment> Comments => _comments ?? (_comments = new Repository<Comment>(_db));
+        public IRepository<Feedback> Feedbacks => _feedbacks ?? (_feedbacks = new Repository<Feedback>(_db));
+        public IRepository<MediaFiles> MediaFiles => _mediafiles ?? (_mediafiles = new Repository<MediaFiles>(_db));
 
         public async Task SaveAsync()
         {
