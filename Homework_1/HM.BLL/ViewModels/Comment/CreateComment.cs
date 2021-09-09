@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HM.BLL.ViewModels.Comment
 {
-    public class CrateComment
+    public class CreateComment
     {
         public string AuthorName { get; set; }
         public string Text { get; set; }

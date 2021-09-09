@@ -8,6 +8,8 @@ namespace HM.DAL
     {
         public DbSet<Product> Products { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<Feedback> Feedbacks { get; set; }
+        public DbSet<MediaFiles> MediaFiles { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options): base(options)
         {

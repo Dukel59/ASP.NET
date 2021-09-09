@@ -19,4 +19,10 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HM.BLL\HM.BLL.csproj" />
+    <ProjectReference Include="..\HM.DAL\HM.DAL.csproj" />
+    <ProjectReference Include="..\HM.Models\HM.Models.csproj" />
+  </ItemGroup>
+
 </Project>
