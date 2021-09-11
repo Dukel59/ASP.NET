@@ -21,9 +21,23 @@ namespace Homework_1.Controllres
         }
 
         [HttpGet]
+        [Route ("getbyid")]
         public List<InfoComment> GetCommentByFeedbackId(Guid id)
         {
             return _commentService.FindCommentsByFunc(m => m.FeedbackId == id);
+        }
+
+        [HttpGet]
+        [Route("getall")]
+        public List<InfoComment> GetAllComments()
+        {
+            return _commentService.FindCommentsByFunc(null);
+        }
+
+        [HttpPost]
+        public Guid Create([FromForm] CreateComment comment)
+        {
+            return (_commentService.CreateCommentAsync(comment)).Result;
         }
     }
 }

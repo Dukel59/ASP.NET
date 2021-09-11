@@ -38,7 +38,7 @@ namespace HM.BLL.Services
             }
         }
 
-        public List<InfoComment> FindCommentsByFunc(Func<ICommentService, bool> func)
+        public List<InfoComment> FindCommentsByFunc(Func<Comment, bool> func)
         {
             try
             {
