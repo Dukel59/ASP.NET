@@ -1,0 +1,80 @@
+﻿@model IEnumerable<TicketOffice.BLL.VMs.Ticket.InfoTicket>
+
+@{
+    ViewData["Title"] = "Tickets";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CreationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrainNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Destination)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Departs)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Track)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrainCarNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlaceNumber)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreationDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TrainNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Destination)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Departs)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Track)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TrainCarNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PlaceNumber)
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-controller="Ticket" asp-route-id="@item.Id">Удалить билет</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h2>Tickets</h2>
+
+<form method="get">
+    <div class="form-row form-group">
+        <label class="control-label">Время отправления</label>
+        <input name="CretationDate" class="form-control" />
+
+        <label class="control-label">Номер поезда</label>
+        <input name="TrainNumber" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Фильтр" class="btn btn-danger"/>
+    </div>
+</form>

@@ -1,0 +1,28 @@
+﻿@model TicketOffice.BLL.VMs.Train.CreateTrain
+
+@{
+    ViewBag.Title = "Добавление маршрута";
+}
+
+<form asp-action="create" asp-controller="train">
+    <div class="from-group">
+        <label asp-for="TrainNumber" class="control-label">Номер поезда</label>
+        <input type="text" asp-for="TrainNumber" class="form-control" />
+    </div>
+    <div class="from-group">
+        <label asp-for="Destination" class="control-label">Маршрут</label>
+        <input type="text" asp-for="Destination" class="form-control" />
+    </div>
+    <div class="from-group">
+        <label asp-for="Departs" class="control-label">Время отправления в формате DD.MM.YYYY hh:mm</label>
+        <input type="datetime" asp-for="Departs" class="form-control" />
+    </div>
+    <div class="from-group">
+        <label asp-for="Track" class="control-label">Номер пути</label>
+        <input type="number" asp-for="Track" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Создать" class="btn btn-danger" />
+    </div>
+</form>

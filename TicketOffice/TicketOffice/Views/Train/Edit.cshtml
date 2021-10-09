@@ -1,0 +1,25 @@
+﻿@model TicketOffice.BLL.VMs.Train.InfoTrain
+
+@{
+    ViewBag.Title = "Редактирование маршрута";
+}
+
+<form asp-action="edit" asp-controller="train" asp-route-id="@Model.Id">
+    <div class="form-group">
+        <label asp-for="TrainNumber" class="control-label">Номер поезда</label>
+        <input type="text" asp-for="TrainNumber" class="form-control" />
+
+        <label asp-for="Destination" class="control-label">Номер поезда</label>
+        <input type="text" asp-for="Destination" class="form-control" />
+
+        <label asp-for="Departs" class="control-label">Номер поезда</label>
+        <input type="datetime" asp-for="Departs" class="form-control" />
+
+        <label asp-for="Track" class="control-label">Номер поезда</label>
+        <input type="number" asp-for="Track" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Сохранить" class="btn btn-danger" />
+    </div>
+</form>
